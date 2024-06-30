@@ -1,17 +1,9 @@
 import React from "react";
 import { Stack, Box } from "@mui/material";
-import VideoCard from "./VideoCard"; // Ensure the import path is correct
-import ChannelCard from "./ChannelCard"; // Ensure the import path is correct
+import VideoCard from "./VideoCard"; // Ensure the path and imports are correct
+import ChannelCard from "./ChannelCard"; // Ensure the path and imports are correct
 
 const Videos = ({ videos = [] }) => {
-  // Log the videos prop to debug its value
-  console.log("Videos prop:", videos);
-
-  // Ensure videos is an array before calling map
-  if (!Array.isArray(videos)) {
-    return <div>No videos available</div>;
-  }
-
   return (
     <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
       {videos.map((item, idx) => (

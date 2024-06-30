@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://youtube-v31.p.rapidapi.com";
+const BASE_URL = "https://youtube-search-and-download.p.rapidapi.com";
 
 const options = {
   credentials: "include",
@@ -13,7 +13,7 @@ const options = {
   },
   headers: {
     "x-rapidapi-key": "c4a4127cd4msh79a471cd1fa1172p16846djsnc396a221a99f",
-    "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    "x-rapidapi-host": "youtube-v2.p.rapidapi.com",
   },
 };
 

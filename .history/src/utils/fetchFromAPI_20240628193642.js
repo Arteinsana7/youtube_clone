@@ -13,16 +13,16 @@ const options = {
   },
   headers: {
     "x-rapidapi-key": "c4a4127cd4msh79a471cd1fa1172p16846djsnc396a221a99f",
-    "x-rapidapi-host": "youtube-v31.p.rapidapi.com",
+    "x-rapidapi-host": "https://youtube-v31.p.rapidapi.com",
   },
 };
 
-export const fetchFromAPI = async (url) => {
-  try {
-    const response = await axios.get(`${BASE_URL}/${url}`, { ...options });
-    return response.data; // It's good practice to return the data property of the response
-  } catch (error) {
-    console.error("Failed to fetch data:", error.message);
-    throw error; // Rethrow the error so it can be handled by the caller
-  }
-};
+// export const fetchFromAPI = async (url) => {
+//   try {
+//     const response = await axios.get(`${BASE_URL}/${url}`, { ...options });
+//     return response.data; // It's good practice to return the data property of the response
+//   } catch (error) {
+//     console.error("Failed to fetch data:", error.message);
+//     throw error; // Rethrow the error so it can be handled by the caller
+//   }
+// };
