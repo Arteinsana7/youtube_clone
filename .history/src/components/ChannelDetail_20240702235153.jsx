@@ -11,11 +11,18 @@ const ChannelDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    console.log(`Fetching data for channel ID: ${id}`);
     fetchFromAPI(`channels?part=snippet&id=${id}`)
-      .then((data) => setChannelDetail(data?.items[0]));
-
+      .then((data) => {
+        console.log('Channel Data:', data);
+        setChannelDetail(data?.items[0]);
+      });
+  
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`)
-      .then((data) => setVideos(data?.items));
+      .then((data) => {
+        console.log('Videos Data:', data);
+        setVideos(data?.items);
+      });
   }, [id]);
 
   return (
