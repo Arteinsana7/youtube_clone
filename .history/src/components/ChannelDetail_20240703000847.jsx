@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Box } from '@mui/material';
 
-import { ChannelCard, Videos } from './'; // Assuming you have a Videos component
+import { ChannelCard } from './';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const ChannelDetail = () => {
@@ -25,16 +25,14 @@ const ChannelDetail = () => {
           style={{
             background: 'linear-gradient(90deg, rgba(0,238,247,1) 0%, rgba(206,184,1) 100%, rgba(0,212,225,1) 100%)',
             zIndex: 10,
-            height: '300px',
+            height: '300px', // Corrected typo here
           }}
         />
-        <ChannelCard channelDetail={channelDetail} marginTop="-110px" />
+        <ChannelCard channelDetail={channelDetail} 
+        marginTop="-93px"
+        />
       </Box>
-      <Box display="flex" p="2">
-        <Box sx={{ mr: { sm: '100px' } }}>
-          <Videos videos={videos} /> {/* Corrected component name to Videos */}
-        </Box>
-      </Box>
+      {/* Additional content like videos can be added here */}
     </Box>
   );
 };
