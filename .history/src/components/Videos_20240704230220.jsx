@@ -7,14 +7,14 @@ const Videos = ({ videos, direction }) => {
   if(!videos?.length) return <Loader />;
   
   return (
-    <Stack  direction={direction || "row"}  flexWrap="wrap" justifyContent="center" alignItems="center" gap={2}>
+    <Box direction={direction || "row"} flexWrap="wrap" justifyContent="start" alignItems="center" gap={2}>
       {videos.map((item, idx) => (
-        <Box key={idx}>
+        <Stack key={idx}>
           {item.id.videoId && <VideoCard video={item} /> }
           {item.id.channelId && <ChannelCard channelDetail={item} />}
-        </Box>
+        </Stack>
       ))}
-    </Stack>
+    </Box>
   );
 }
 

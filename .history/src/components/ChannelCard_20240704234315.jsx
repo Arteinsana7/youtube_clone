@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, CardContent, CardMedia, Typography } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { Link } from 'react-router-dom';
-import { demoProfilePicture  } from '../utils/constants';
+import { demoProfilePicture } from '../utils/constants';
 
 const ChannelCard = ({ channelDetail, marginTop }) => (
   <Box
@@ -10,22 +10,25 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
       boxShadow: 'none',
       borderRadius: '20px',
       display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: { xs: '356px', md: '320px' },
+      flexDirection: 'column',
+      justifyContent: 'row', // Adjust as needed
+      alignItems: 'row',
+      width: '100%', // Adjust as needed
+      maxWidth: '358px', // Adjust as needed
       height: '326px',
       margin: 'auto',
       marginTop,
     }}
   >
-    <Link to={`/channel/${channelDetail?.id?.channelId}`}>
-      <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff' }}>
-        <CardMedia
-          image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture }
-          alt={channelDetail?.snippet?.title}
-          sx={{ borderRadius: '50%', height: '180px', width: '180px', mb: 2, border: '1px solid #e3e3e3' }}
-        />
-        <Typography variant="h6">
+    <Link to={`/channel/${channelDetail?.id?.channelId}`} style={{ textDecoration: 'none' }}>
+      <CardMedia
+        component="img"
+        image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
+        alt={channelDetail?.snippet?.title}
+        sx={{ borderRadius: '50%', height: '180px', width: '180px', mb: 2, border: '1px solid #e3e3e3' }}
+      />
+      <CardContent sx={{ textAlign: 'center', color: '#fff' }}>
+        <Typography variant="h6" sx={{ mb: 1 }}>
           {channelDetail?.snippet?.title}{' '}
           <CheckCircleIcon sx={{ fontSize: '14px', color: 'gray', ml: '5px' }} />
         </Typography>

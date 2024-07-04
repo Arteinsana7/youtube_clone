@@ -15,7 +15,7 @@ const ChannelDetail = () => {
     const fetchResults = async () => {
       const data = await fetchFromAPI(`channels?part=snippet&id=${id}`);
 
-      setChannelDetail(data?.items[0]);
+      setChannelDetail(data?.items[1]);
 
       const videosData = await fetchFromAPI(`search?channelId=${id}&part=snippet%2Cid&order=date`);
 
@@ -35,7 +35,7 @@ const ChannelDetail = () => {
         }} />
         <ChannelCard channelDetail={channelDetail} marginTop="-93px" />
       </Box>
-      <Box p={2} display="flex" justifyContent="center">
+      <Box p={2} display="flex">
       <Box sx={{ mr: { sm: '100px' } }}/>
         <Videos videos={videos} />
       </Box>
