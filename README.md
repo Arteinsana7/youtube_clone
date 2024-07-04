@@ -1,6 +1,10 @@
 # Youtube Clone app
 
+![-----](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 Fetchin data with React and rapid API.
+Videos channels, views and likes.
+
 ## Available Scripts
 
 In the project directory, you can run:
