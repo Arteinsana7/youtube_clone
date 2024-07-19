@@ -2,7 +2,7 @@
 
 ![-----](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-Fetchin data with React and rapid API.
+Fetching data with React and rapid API.
 Videos channels, views and likes.
 
 ## Available Scripts
